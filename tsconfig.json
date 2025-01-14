@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "composite":true,
+    "module": "esnext", // "NodeNext",
+    "rootDir": "src",
+    "sourceRoot": "src",
+    "baseUrl": ".",
+    "moduleResolution": "bundler",// "NodeNext",
+    "moduleDetection": "auto",
+    "types": ["node"],
+    "sourceMap": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useUnknownInCatchVariables": false,
+    "strict": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true
+  },
+  "include": ["src"]
+}

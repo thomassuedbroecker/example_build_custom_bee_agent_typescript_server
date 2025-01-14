@@ -1,0 +1,97 @@
+{
+	"openapi": "3.0.0",
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"EndpointAgentCustomGermanOutput": {
+				"properties": {
+					"answer": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"answer"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"EndpointAgentCustomGermanInput": {
+				"properties": {
+					"question": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"question"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "example-custom-agent",
+		"version": "0.0.1",
+		"description": "example-custom-agent",
+		"license": {
+			"name": "Apache-2.0"
+		},
+		"contact": {}
+	},
+	"paths": {
+		"/agentcustomgerman": {
+			"post": {
+				"operationId": "Agent Custom German",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/EndpointAgentCustomGermanOutput"
+								}
+							}
+						}
+					}
+				},
+				"description": "You provide input questions like:\n - 'Why is the sky blue?' \n",
+				"summary": "Interact with a AgentCustomGerman",
+				"tags": [
+					"AgentCustomGermanDemo"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/EndpointAgentCustomGermanInput"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	],
+	"tags": [
+		{
+			"name": "example-custom-agent",
+			"description": "example-custom-agent",
+			"externalDocs": {
+				"description": "example-custom-agent",
+				"url": "http://example-custom-agent.net"
+			}
+		}
+	]
+}
